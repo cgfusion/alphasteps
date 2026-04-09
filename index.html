@@ -45,7 +45,7 @@
         /* Header / Hero Section */
         header {
             text-align: center;
-            padding: 100px 20px;
+            padding: 100px 20px 40px 20px;
             border-bottom: 2px solid var(--neon-cyan);
             box-shadow: 0 0 20px rgba(0, 243, 255, 0.2);
             position: relative;
@@ -66,36 +66,19 @@
             text-shadow: 0 0 5px var(--neon-pink);
         }
 
-        header p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 40px auto;
-            font-size: 1.3rem;
+        /* Phone UI Image Container */
+        .image-container {
+            text-align: center;
+            margin: 20px auto 60px auto;
+            max-width: 300px; /* Saiz bingkai telefon */
         }
 
-        /* Neon Button */
-        .btn-neon {
-            display: inline-block;
-            padding: 15px 40px;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: var(--bg-color);
-            background-color: var(--neon-cyan);
-            text-decoration: none;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            box-shadow: 0 0 10px var(--neon-cyan), 0 0 40px var(--neon-cyan);
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-        }
-
-        .btn-neon:hover {
-            background-color: var(--neon-pink);
-            box-shadow: 0 0 10px var(--neon-pink), 0 0 40px var(--neon-pink);
-            color: white;
-            transform: scale(1.05);
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 36px; /* Bingkai telefon */
+            border: 2px solid var(--neon-cyan);
+            box-shadow: 0 0 30px rgba(0, 243, 255, 0.4);
         }
 
         /* Main Content Sections */
@@ -172,6 +155,22 @@
             top: 4px;
         }
 
+        /* Ranks List Styling */
+        .rank-list {
+            margin-top: 20px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+            border-left: 3px solid var(--neon-pink);
+        }
+
+        .rank-title {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--neon-cyan);
+            margin-bottom: 5px;
+            display: block;
+        }
+
         /* Footer */
         footer {
             text-align: center;
@@ -191,6 +190,7 @@
             header h1 { font-size: 2.8rem; }
             header h2 { font-size: 1.2rem; }
             .section-title { font-size: 2rem; }
+            .image-container { max-width: 200px; }
         }
     </style>
 </head>
@@ -200,8 +200,14 @@
         <div class="container">
             <h1>AlphaSteps</h1>
             <h2>Ubah Cara Anda Belajar Matematik!</h2>
-            <p>Adakah matematik satu subjek yang membosankan atau menakutkan? AlphaSteps hadir untuk mengubah persepsi tersebut! Kami menggabungkan silibus pembelajaran sebenar dengan dunia permainan yang memukau.</p>
-            <a href="#" class="btn-neon">Muat Turun Sekarang</a>
+            
+            <div class="image-container">
+                <a href="#">
+                    <img src="./image/image_3.png" alt="Menu Utama AlphaSteps">
+                </a>
+            </div>
+
+            <p>Adakah matematik satu subjek yang membosankan atau menakutkan? AlphaSteps hadir untuk mengubah persepsi tersebut! Kami menggabungkan silibus pembelajaran sebenar dengan dunia permainan (gamification) yang memukau.</p>
         </div>
     </header>
 
@@ -214,7 +220,7 @@
             </div>
             <div class="card">
                 <h3>📈 Pantau Kemajuan Bersama</h3>
-                <p>Pendidikan adalah usaha bersama. AlphaSteps menyediakan akses berbeza untuk persekitaran yang lebih tersusun:</p>
+                <p>Pendidikan adalah usaha bersama. AlphaSteps menyediakan profil dan papan pemuka khusus untuk:</p>
                 <ul>
                     <li><strong>Pelajar:</strong> Fokus pada permainan & skor.</li>
                     <li><strong>Ibu Bapa:</strong> Pantau prestasi anak di rumah.</li>
@@ -225,20 +231,52 @@
     </section>
 
     <section class="container" style="padding-bottom: 80px;">
-        <h2 class="section-title">Tiga Mod Pembelajaran</h2>
+        <h2 class="section-title">Tiga Mod Pembelajaran & Pangkat</h2>
         <div class="grid">
+            
             <div class="card">
                 <h3>1. Latihan Solo</h3>
-                <p>Belajar mengikut rentak sendiri. Ini adalah ruang yang tenang dan tanpa tekanan masa untuk pelajar membina serta memperkukuhkan pemahaman asas pengiraan.</p>
+                <p>Belajar mengikut rentak sendiri tanpa tekanan masa untuk membina dan memperkukuhkan asas pengiraan.</p>
+                <div class="rank-list">
+                    <span class="rank-title">Semua Rank:</span>
+                    <p>NOVIS ➔ PERANTIS ➔ MAHIR ➔ PAKAR ➔ GRANDMASTER</p>
+                </div>
             </div>
+
             <div class="card">
                 <h3>2. Penilaian Standard</h3>
-                <p>Ujian berstruktur untuk menilai tahap penguasaan semasa pelajar. Bantu kenal pasti di mana tahap kekuatan anda dan topik apa yang masih lemah.</p>
+                <p>Ujian berstruktur untuk menilai tahap penguasaan semasa pelajar.</p>
+                <div class="rank-list">
+                    <span class="rank-title">Semua Rank:</span>
+                    <p>GRED D (ASAS) ➔ GRED C ➔ GRED B ➔ GRED A ➔ GRED S (SEMPURNA)</p>
+                </div>
             </div>
+
             <div class="card">
                 <h3>3. Arena Kompetitif</h3>
-                <p>Sudah bersedia? Uji kelajuan dan ketepatan anda di <em>Ranked Arenas</em>! Bersaing skor dengan rakan-rakan secara sihat untuk naik ke carta teratas.</p>
+                <p>Uji kelajuan dan ketepatan anda di *Ranked Arenas*. Bersaing skor dengan rakan-rakan secara sihat untuk naik ke carta teratas.</p>
+                <div class="rank-list">
+                    <span class="rank-title">Semua Rank:</span>
+                    <p>GANGSA ➔ PERAK ➔ EMAS ➔ PLATINUM ➔ BERLIAN ➔ ALPHA</p>
+                </div>
             </div>
+
+        </div>
+    </section>
+
+    <section class="container" style="background: rgba(0, 0, 0, 0.4); padding: 60px 20px; border-radius: 10px; border: 1px solid var(--neon-cyan);">
+        <h2 class="section-title" style="color: var(--neon-pink);">Mod Kelas (Classroom)</h2>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <ul>
+                <li>Kelas diwujudkan oleh guru (kod kelas dan QR code akan dijana secara automatik).</li>
+                <li>Guru boleh daftarkan pelajar dalam kelas.</li>
+                <li>Murid boleh masuk ke dalam ruangan kelas menggunakan kod kelas atau QR Code yang disediakan.</li>
+                <li>Guru memulakan game dengan menekan butang *start* (soalan operasi matematik asas dijana secara automatik oleh sistem, *countdown* bermula).</li>
+                <li>Jumlah soalan, tahap kesukaran dan had masa ditentukan oleh guru.</li>
+                <li>Soalan adalah sama untuk semua murid.</li>
+                <li>Leaderboard boleh dipantau secara *live* oleh guru melalui paparan khas. Kedudukan akan sentiasa berubah berdasarkan jumlah semasa soalan yang telah dijawab dengan betul.</li>
+                <li>Leaderboard akan disimpan dalam *database* dan boleh dilihat bila-bila masa.</li>
+            </ul>
         </div>
     </section>
 
